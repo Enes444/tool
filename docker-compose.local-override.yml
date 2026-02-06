@@ -1,0 +1,11 @@
+﻿services:
+  caddy:
+    profiles: ["disabled"]
+
+  api:
+    ports:
+      - "8000:8000"
+
+  web:
+    ports:
+      - "5173:80"

@@ -1,0 +1,19 @@
+{
+    email {$EMAIL}
+}
+
+{$DOMAIN}, www.{$DOMAIN} {
+    encode gzip
+
+    handle /api/* {
+        reverse_proxy {$API_UPSTREAM}
+    }
+
+    handle /healthz {
+        reverse_proxy {$API_UPSTREAM}
+    }
+
+    handle {
+        reverse_proxy {$WEB_UPSTREAM}
+    }
+}

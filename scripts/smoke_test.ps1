@@ -1,0 +1,7 @@
+Write-Host "Manual Smoke Test (UI)"
+Write-Host "1) Login"
+Write-Host "2) Ticket create/edit/archive/restore"
+Write-Host "3) Claim submit/approve(or deny)/paid/archive/restore"
+Write-Host "4) Deliverable review approve/request changes"
+Write-Host "5) Toggle 'Show archived' in lists"
+Write-Host "6) Logout/Login erneut"

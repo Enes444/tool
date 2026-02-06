@@ -1,0 +1,19 @@
+{
+email admin@proofsponsor.com
+}
+
+proofsponsor.com, www.proofsponsor.com {
+encode gzip
+
+handle /api/* {
+reverse_proxy api:8000
+}
+
+handle /healthz {
+reverse_proxy api:8000
+}
+
+handle {
+reverse_proxy web:80
+}
+}
